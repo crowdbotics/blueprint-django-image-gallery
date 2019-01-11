@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# BASE_PATH can be passed in, otherwise default to the current path
-[ -n "$1" ] && BASE_PATH=$1 || BASE_PATH="./"
-
-PROJECT_NAME="dancrowdboticscom_dan_55"
+# BASE_PATH is the full path to the project root
+BASE_PATH="$1"
+# APP_NAME is the name of the Django app that will be modified
+APP_NAME="$2"
 
 PIPFILE_FILE="$BASE_PATH/Pipfile"
-SETTINGS_FILE="$BASE_PATH/$PROJECT_NAME/settings.py"
-URLS_FILE="$BASE_PATH/$PROJECT_NAME/urls.py"
+SETTINGS_FILE="$BASE_PATH/$APP_NAME/settings.py"
+URLS_FILE="$BASE_PATH/$APP_NAME/urls.py"
 DOCKERFILE_FILE="$BASE_PATH/Dockerfile"
 
 # Add a django app to INSTALLED_APPS
