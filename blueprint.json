@@ -1,0 +1,5 @@
+{
+  "name": "Django Image Gallery",
+  "description": "Add an image gallery to a Django app",
+  "frameworks": ["django"]
+}
